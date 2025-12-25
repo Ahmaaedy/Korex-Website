@@ -888,7 +888,12 @@
                 <p id="modalTeamDescription"></p>
             </div>
             <div class="modal-footer-team">
-                <a class="inline-flex group py-2 px-4 items-center justify-center text-sm font-medium text-white hover:text-teal-900 border border-teal-900 hover:bg-white bg-teal-900 rounded-full transition duration-200" href="#contact">
+                <a
+  id="modalLinkedIn"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="inline-flex group py-2 px-4 items-center justify-center text-sm font-medium text-white hover:text-teal-900 border border-teal-900 hover:bg-white bg-teal-900 rounded-full transition duration-200">
+
                     <span class="mr-2"><img src="images/linkedin.png" style="width: 20px; height: 20px; filter: brightness(0) invert(1);"></span> View LinkedIn Profile
                     <span class="transform group-hover:translate-x-0.5 transition-transform duration-200 ml-2">
                         <svg width="18" height="18" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -907,34 +912,43 @@
     const teamMembers = [
         {
             name: "Engr. Prof. Baba El-Yakubu Jibril",
-            title: "CEO & Founder",
-            description: "Engr. Prof. Baba El-Yakubu is a Professor of Chemical Engineering at Ahmadu Bello University (ABU), Zaria, Nigeria, and the current Director of Accreditation, Engineering Accreditation Committee (EAC) at the Council for the Regulation of Engineering in Nigeria (COREN), where he is on sabbatical leave. He earned his Ph.D. in Chemical Engineering from the University of Salford, United Kingdom, in 2002, with a doctoral thesis on Catalytic Oxidative Dehydrogenation of Propane. He also holds an MSc in Chemical Engineering from the University of Petroleum and Minerals, Saudi Arabia (1996), and a B.Eng. in Chemical Engineering from Ahmadu Bello University, Nigeria (1992). Professor El-Yakubu has held several academic and leadership positions, including PTDF-Chair Professor (2017–2025) and Head of the Department of Chemical Engineering at ABU (2017–2019). He established and headed the Department of Chemical and Petroleum Engineering at Bayero University, Kano (2015–2017). Earlier in his career, he worked at Sultan Qaboos University, Oman, and King Saud University, Saudi Arabia. His research spans renewable bioethanol as automobile fuel, enhanced heavy crude oil recovery, zeolite catalysis, computational materials design and process simulations and design. He has attracted significant research funding, including projects sponsored by PTDF and TETFund, such as the development of zeolite catalysts for aromatization of alkanes and enhanced recovery of Nigerian petroleum using green solvents. He has also consulted and offered insights to several clients including Raw Materials Research and Development Council (RMRDC) on bioethanol feasibility studies using different raw materials in Nigeria. In these and related areas, he has published more than 110 articles in international journals and holds three registered patents. He served as Editor-in-Chief of the Nigerian Journal of Engineering (2019–2023). His current h-index is 36, and his i10-index is 68. His recent research focuses on developing a “System for Enhancing Bioethanol production via Porous Silica-Alginate Encapsulation of Saccharomyces cerevisiae”. This will potentially drastically decrease the amount of enzyme required for fermentation processes."
+            title: "Job title",
+            description: "Engr. Prof. Baba El-Yakubu is a Professor of Chemical Engineering at Ahmadu Bello University (ABU), Zaria, Nigeria, and the current Director of Accreditation, Engineering Accreditation Committee (EAC) at the Council for the Regulation of Engineering in Nigeria (COREN), where he is on sabbatical leave. He earned his Ph.D. in Chemical Engineering from the University of Salford, United Kingdom, in 2002, with a doctoral thesis on Catalytic Oxidative Dehydrogenation of Propane. He also holds an MSc in Chemical Engineering from the University of Petroleum and Minerals, Saudi Arabia (1996), and a B.Eng. in Chemical Engineering from Ahmadu Bello University, Nigeria (1992). Professor El-Yakubu has held several academic and leadership positions, including PTDF-Chair Professor (2017–2025) and Head of the Department of Chemical Engineering at ABU (2017–2019). He established and headed the Department of Chemical and Petroleum Engineering at Bayero University, Kano (2015–2017). Earlier in his career, he worked at Sultan Qaboos University, Oman, and King Saud University, Saudi Arabia. His research spans renewable bioethanol as automobile fuel, enhanced heavy crude oil recovery, zeolite catalysis, computational materials design and process simulations and design. He has attracted significant research funding, including projects sponsored by PTDF and TETFund, such as the development of zeolite catalysts for aromatization of alkanes and enhanced recovery of Nigerian petroleum using green solvents. He has also consulted and offered insights to several clients including Raw Materials Research and Development Council (RMRDC) on bioethanol feasibility studies using different raw materials in Nigeria. In these and related areas, he has published more than 110 articles in international journals and holds three registered patents. He served as Editor-in-Chief of the Nigerian Journal of Engineering (2019–2023). His current h-index is 36, and his i10-index is 68. His recent research focuses on developing a “System for Enhancing Bioethanol production via Porous Silica-Alginate Encapsulation of Saccharomyces cerevisiae”. This will potentially drastically decrease the amount of enzyme required for fermentation processes.",
+            linkedinUrl: "https://www.linkedin.com/in/baba-el-yakubu-11795323"
+         },
+        {
+            name: "Engr. Afolabi Idris",
+            title: "Job title",
+            description: "Some text to describe team member",
+            linkedinUrl:"https://linkedin.com/in/afolabi-idris-59180917"
         },
         {
-            name: "Mollie Ross",
-            title: "Art Director",
-            description: "Some text to describe team member"
+            name: "Engr. Segun Oyebanji",
+            title: "Job Title",
+            description: "Some text goes here that describes about team member.",
+            linkedinUrl:"https://linkedin.com/in/olusegun-oyebanji-51575417"
         },
         {
-            name: "Dylan Adams",
-            title: "Developer",
-            description: "Some text goes here that describes about team member."
-        },
-        {
-            name: "Jennifer Page",
+            name: "Engr. Bolakale Uthman",
             title: "Designer",
-            description: "Some text goes here that describes about team member.."
+            description: "Some text goes here that describes about team member..",
+            linkedinUrl:"https://linkedin.com/in/bolakale-uthman-pmp-mscpm-c-eng-7311a72a"
         }
     ];
 
     function openTeamModal(index) {
-        const member = teamMembers[index];
-        document.getElementById('modalTeamName').textContent = member.name;
-        document.getElementById('modalTeamTitle').textContent = member.title;
-        document.getElementById('modalTeamDescription').textContent = member.description;
-        document.getElementById('teamModal').classList.add('active');
-        document.body.style.overflow = 'hidden';
-    }
+  const member = teamMembers[index];
+
+  document.getElementById("modalTeamName").textContent = member.name;
+  document.getElementById("modalTeamTitle").textContent = member.title;
+  document.getElementById("modalTeamDescription").textContent = member.description;
+
+  // THIS LINE FIXES EVERYTHING
+  document.getElementById("modalLinkedIn").href = member.linkedinUrl;
+
+  document.getElementById("teamModal").classList.add("active");
+}
+
 
     function closeTeamModal() {
         document.getElementById('teamModal').classList.remove('active');
